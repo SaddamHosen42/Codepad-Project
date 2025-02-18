@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="CodepadController">
+    <!-- Top Menu Bar -->
+    <top>
+        <MenuBar>
+            <!-- File Menu -->
+            <Menu text="File">
+                <MenuItem text="New" onAction="#newFile"/>
+                <MenuItem text="Open..." onAction="#openFile"/>
+                <MenuItem text="Save" onAction="#saveFile"/>
+                <MenuItem text="Save As..." onAction="#saveFileAs"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" onAction="#exitApplication"/>
+            </Menu>
+
+            <!-- Edit Menu -->
+            <Menu text="Edit">
+                <MenuItem text="Undo" onAction="#undoAction"/>
+                <MenuItem text="Redo" onAction="#redoAction"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Cut" onAction="#cutText"/>
+                <MenuItem text="Copy" onAction="#copyText"/>
+                <MenuItem text="Paste" onAction="#pasteText"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Main Text Area -->
+    <center>
+        <TextArea fx:id="textArea" wrapText="true"/>
+    </center>
+</BorderPane>
